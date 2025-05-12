@@ -1,4 +1,3 @@
-import './App.scss'
 import About from './pages/About/About'
 import Blog from './pages/Blog/Blog'
 import Contact from './pages/Contact/Contact'
@@ -6,9 +5,7 @@ import Layout from './pages/Layout/Layout'
 import SignIn from './pages/SignIn/SignIn'
 import SignUp from './pages/SignUp/SignUp'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-
 function App() {
-
   return (
     <>
       <BrowserRouter basename='/finsweet/'>
@@ -24,5 +21,4 @@ function App() {
     </>
   )
 }
-
 export default App

@@ -1,0 +1,37 @@
+@use '../../../scss/mixins';
+@use '../../../scss/vars';
+@use '../../../scss/reset';
+
+.section1 {
+    @include mixins.Flex(column, flex-start, flex-start, 48px);
+    padding: 128px 80px;
+    width: 100%;
+    background-image: url('../../../assets/hompage/png/man-in-black-suit-wearing-eye-glasses-sitting-on-gray-sofa-using-macbook-3772622.png');
+    &-container {
+        @include mixins.Flex(column, flex-start, flex-start, 24px);
+        &__sub-title {
+            @include mixins.Inter(16px, 400, 19px);
+            color: vars.$bg-color;
+        }
+        &__title {
+            @include mixins.Sen(48px, 700, 64px);
+            color: vars.$bg-color;
+            width: 70%;
+        }
+    }
+    &-textbox {
+        @include mixins.Flex(column, flex-start, flex-start, 16px);
+        &__text {
+            @include mixins.Inter(16px, 400, 19px);
+            color: vars.$bg-color;
+        }
+        &__text2 {
+            @include mixins.Inter(16px, 400, 19px);
+            color: vars.$bg-color;
+            width: 55%;
+        }
+    }
+    &-btn {
+        background-color: vars.$button-color;
+    }
+}

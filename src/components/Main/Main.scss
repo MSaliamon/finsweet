@@ -1,0 +1,7 @@
+@use '../../scss/mixins';
+@use '../../scss/vars';
+@use '../../scss/reset';
+
+.main {
+    @include mixins.Flex(column, flex-start, flex-start, 128px);
+}
