@@ -1,0 +1,65 @@
+@use '../../../scss/mixins';
+@use '../../../scss/vars';
+@use '../../../scss/reset';
+
+.section2 {
+    @include mixins.Flex(row, flex-start, flex-start, 32px);
+    padding: 0px 80px;
+    &-container1 {
+        @include mixins.Flex(column, flex-start, flex-start, 32px);
+        &__title {
+            @include mixins.Sen(36px, 700, 48px);
+            color: vars.$first-color;
+        }
+        .section2-box {
+            @include mixins.Flex(column, flex-start, flex-start, 32px);
+            &__cont {
+                @include mixins.Flex(column, flex-start, flex-start, 16px);
+                &-text1 {
+                    @include mixins.Inter(14px, 500, 20px);
+                }
+                &-text2 {
+                    @include mixins.Sen(28px, 700, 40px);
+                    width: 75%;
+                }
+                &-text3 {
+                    @include mixins.Inter(16px, 400, 28px);
+                    width: 57%;
+                }
+            }
+            &__btn {
+                background-color: vars.$button-color;
+            }
+        }
+    }
+    &-container2 {
+        @include mixins.Flex(column, flex-start, flex-start, 32px);
+        .section2-box1 {
+            @include mixins.Flex(row, space-between, center, 0px);
+            width: 100%;
+            &__title {
+                @include mixins.Sen(36px, 700, 48px);
+            }
+            &__link {
+                @include mixins.Inter(16px, 400, 28px);
+            }
+        }
+        .section2-box2 {
+            @include mixins.Flex(column, flex-start, flex-start, 0px);
+            .section2-cont {
+                @include mixins.Flex(column, flex-start, flex-start, 8px);
+                padding: 32px;
+                &__text1 {
+                    @include mixins.Inter(14px, 500, 20px);
+                }
+                &__text2 {
+                    @include mixins.Sen(24px, 700, 32px);
+                    width: 75%;
+                }
+            }
+            .section2-cont:hover {
+                background-color: vars.$third-color;
+            }
+        }
+    }
+}
