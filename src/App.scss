@@ -7,4 +7,8 @@
 body {
   background-color: vars.$bg-color;
   color: vars.$first-color;
+  .button {
+    @include mixins.Inter(16px, 700, 19px);
+    padding: 16px 48px;
+  }
 }

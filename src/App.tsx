@@ -11,7 +11,7 @@ function App() {
 
   return (
     <>
-      <BrowserRouter basename='/Foodieland/'>
+      <BrowserRouter basename='/finsweet/'>
         <Routes>
           <Route path="/" element={<Layout />} />
           <Route path="signup" element={<SignUp />} />

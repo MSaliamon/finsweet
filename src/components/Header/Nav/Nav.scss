@@ -1,0 +1,13 @@
+@use '../../../scss/mixins';
+@use '../../../scss/vars';
+@use '../../../scss/reset';
+
+.nav {
+    &__list {
+        @include mixins.Flex(row, center, center, 24px);
+    }
+    &__link {
+        @include mixins.Inter(16px, 400, 19px);
+        color: vars.$bg-color;
+    }
+}

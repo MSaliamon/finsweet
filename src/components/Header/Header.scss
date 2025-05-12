@@ -1,0 +1,16 @@
+@use '../../scss/mixins';
+@use '../../scss/vars';
+@use '../../scss/reset';
+
+.header {
+    @include mixins.Flex(row, space-around, center, 0px);
+    padding: 25px 0px;
+    background-color: vars.$first-color;
+    &-btns {
+        @include mixins.Flex(row, center, center, 16px);
+        &__btn {
+            color: vars.$first-color;
+            background-color: vars.$bg-color;
+        }
+    }
+}
