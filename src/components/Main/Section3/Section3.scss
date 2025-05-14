@@ -1,0 +1,38 @@
+@use '../../../scss/mixins';
+@use '../../../scss/vars';
+@use '../../../scss/reset';
+
+.section3 {
+    @include mixins.Flex(row, center, flex-start, 32px);
+    margin: 0px 80px;
+    padding: 96px 80px;
+    background-color: vars.$second-color;
+    &-container1 {
+        @include mixins.Flex(column, flex-start, flex-start, 24px);
+        &__sub-title {
+            @include mixins.Inter(16px, 600, 20px);
+        }
+        &__title {
+            @include mixins.Sen(36px, 700, 48px);
+        }
+        &__text {
+            @include mixins.Inter(16px, 400, 28px);
+        }
+        &__link {
+            @include mixins.Sen(18px, 700, 32px);
+        }
+    }
+    &-container2 {
+        @include mixins.Flex(column, flex-start, flex-start, 24px);
+        &__sub-title {
+            @include mixins.Inter(16px, 600, 20px);
+        }
+        &__title {
+            @include mixins.Sen(36px, 700, 48px);
+            width: 80%;
+        }
+        &__text {
+            @include mixins.Inter(16px, 400, 28px);
+        }
+    }
+}
