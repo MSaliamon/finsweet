@@ -1,0 +1,38 @@
+@use '../../../scss/mixins';
+@use '../../../scss/vars';
+@use '../../../scss/reset';
+
+.section4 {
+    @include mixins.Flex(column, center, center, 48px);
+    padding: 96px 80px;
+    width: 100%;
+    &__title {
+        @include mixins.Sen(36px, 700, 48px);
+    }
+    &-wrap {
+        @include mixins.Flex(column, center, center, 108px);
+        .section4-container1 {
+            @include mixins.Flex(row, center, center, 24px);
+            .section4-box {
+                @include mixins.Flex(column, center, center, 30px);
+                padding: 40px;
+                background-color: vars.$third-color;
+                &__textbox {
+                    @include mixins.Flex(column, center, center, 4px);
+                    &-text1 {
+                        @include mixins.Sen(28px, 700, 40px);
+                    }
+                    &-text2 {
+                        @include mixins.Inter(14px, 400, 20px);
+                    }
+                }
+                &__socials {
+                    @include mixins.Flex(row, center, center, 16px);
+                }
+            }
+        }
+        .section4-container2 {
+            @include mixins.Flex(row, center, center, 86px);
+        }
+    }
+}
