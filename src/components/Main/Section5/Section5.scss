@@ -1,0 +1,50 @@
+@use '../../../scss/mixins';
+@use '../../../scss/vars';
+@use '../../../scss/reset';
+
+.section5 {
+    @include mixins.Flex(row, center, center, 180px);
+    padding: 80px 70px;
+    margin: 0px 80px;
+    background-color: vars.$third-color;
+    &-container1 {
+        @include mixins.Flex(column, center, flex-start, 15px);
+        &__sub-title {
+            @include mixins.Inter(16px, 600, 20px);
+        }
+        &__title {
+            @include mixins.Sen(36px, 700, 48px);
+            width: 80%;
+        }
+        &__text {
+            @include mixins.Inter(16px, 400, 28px);
+            width: 80%;
+        }
+    }
+    &-container2 {
+        @include mixins.Flex(column, space-between, flex-start, 121px);
+        width: 70%;
+        &__text {
+            @include mixins.Sen(24px, 700, 32px);
+            width: 76%;
+        }
+        .section5-slider {
+            @include mixins.Flex(row, center, center, 141px);
+            .section5-slide {
+                @include mixins.Flex(row, center, center, 16px);
+                &__textbox {
+                    @include mixins.Flex(column, flex-start, flex-start, 0px);
+                    &-name {
+                        @include mixins.Sen(24px, 700, 32px);
+                    }
+                    &-place {
+                        @include mixins.Inter(16px, 400, 28px);
+                    }
+                }
+            }
+            .section5-buttons {
+                @include mixins.Flex(row, center, center, 16px);
+            }
+        }
+    }
+}
