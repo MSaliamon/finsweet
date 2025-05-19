@@ -1,0 +1,55 @@
+@use '../../scss/mixins';
+@use '../../scss/vars';
+@use '../../scss/reset';
+
+.footer {
+    @include mixins.Flex(column, flex-start, flex-start, 48px);
+    padding: 57px 80px;
+    background-color: vars.$first-color;
+    margin-top: 128px;
+    &-container1 {
+        @include mixins.Flex(row, space-between, center, 0px);
+        width: 100%;
+    }
+    &-container2 {
+        @include mixins.Flex(row, flex-start, flex-start, 64px);
+        padding: 80px 64px;
+        &__title {
+            @include mixins.Sen(36px, 700, 48px);
+            color: vars.$bg-color;
+            width: 50%;
+        }
+        &__box {
+            @include mixins.Flex(row, flex-start, center, 24px);
+            &-email {
+                @include mixins.Inter(16px, 400, 19px);
+                color: vars.$bg-color;
+                padding: 16px 30px;
+                border: 1px solid rgb(76, 76, 76);
+                width: 100%;
+            }
+            &-btn {
+                color: vars.$bg-color;
+                background-color: vars.$button-color;
+            }
+        }
+    }
+    &-container3 {
+        @include mixins.Flex(row, space-between, center, 0px);
+        width: 100%;
+        .footer-box1 {
+            @include mixins.Flex(column, flex-start, flex-start, 0px);
+            &__text1 {
+                @include mixins.Inter(16px, 400, 28px);
+                color: vars.$bg-color;
+            }
+            &__text2 {
+                @include mixins.Inter(16px, 400, 28px);
+                color: vars.$bg-color;
+            }
+        }
+        .footer-box2 {
+            @include mixins.Flex(row, flex-start, center, 25px);
+        }
+    }
+}
