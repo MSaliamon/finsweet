@@ -1,0 +1,25 @@
+@use '../../../scss/mixins';
+@use '../../../scss/vars';
+@use '../../../scss/reset';
+
+.section6 {
+    @include mixins.Flex(column, center, center, 32px);
+    width: 100%;
+    &-textbox {
+        @include mixins.Flex(column, center, center, 16px);
+        &__title {
+            @include mixins.Sen(36px, 700, 48px);
+            width: 70%;
+            text-align: center
+        }
+        &__text {
+            @include mixins.Inter(16px, 400, 28px);
+            width: 60%;
+            text-align: center;
+        }
+    }
+    &__btn {
+        color: vars.$first-color;
+        background-color: vars.$button-color;
+    }
+}
