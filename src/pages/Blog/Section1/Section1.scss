@@ -1,0 +1,32 @@
+@use '../../../scss/mixins';
+@use '../../../scss/vars';
+@use '../../../scss/reset';
+
+.section1-blog {
+    @include mixins.Flex(row, space-between, center, 0px);
+    padding: 94px 80px;
+    width: 100%;
+    .section1-blog__container {
+        @include mixins.Flex(column, flex-start, flex-start, 20px);
+        &-sub-title {
+            @include mixins.Inter(16px, 500, 20px);
+        }
+        .section1-box {
+            @include mixins.Flex(column, flex-start, flex-start, 20px);
+            width: 73%;
+            &__title {
+                @include mixins.Inter(32px, 700, 40px);
+            }
+            &__text1 {
+                @include mixins.Inter(16px, 400, 20px);
+            }
+            &__text2 {
+                @include mixins.Inter(16px, 400, 20px);
+            }
+        }
+        
+        &-btn {
+            background-color: vars.$button-color;
+        }
+    }
+}
