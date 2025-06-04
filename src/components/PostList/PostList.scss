@@ -1,0 +1,31 @@
+@use '../../scss/mixins';
+@use '../../scss/vars';
+@use '../../scss/reset';
+
+.post {
+    @include mixins.Flex(column, flex-start, flex-start, 69px);
+    &-box {
+        @include mixins.Flex(row, flex-start, center, 32px);
+        &__content {
+            @include mixins.Flex(column, flex-start, flex-start, 20px);
+            &-category {
+                @include mixins.Inter(16px, 600, 20px);
+                color: vars.$category-color;
+            }
+            &-title {
+                @include mixins.Sen(36px, 700, 48px);
+                width: 80%;
+            }
+            &-description {
+                @include mixins.Inter(16px, 400, 28px);
+                width: 80%;
+            }
+        }
+    }
+    &-buttons {
+        @include mixins.Flex(row, center, center, 17px);
+        &__btn {
+            @include mixins.Sen(28px, 700, 40px);
+        }
+    }
+}

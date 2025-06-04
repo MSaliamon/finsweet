@@ -4,7 +4,6 @@
 
 .section1-blog {
     @include mixins.Flex(row, space-between, center, 0px);
-    padding: 94px 80px;
     width: 100%;
     .section1-blog__container {
         @include mixins.Flex(column, flex-start, flex-start, 20px);
