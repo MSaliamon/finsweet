@@ -10,12 +10,6 @@ function Nav() {
             <li className="nav__item">
                 <Link to="/blog" className="nav__link">Blog</Link>
             </li>
-            <li className="nav__item">
-                <Link to="/about" className="nav__link">About Us</Link>
-            </li>
-            <li className="nav__item">
-                <Link to="/contact" className="nav__link">Contact us</Link>
-            </li>
         </ul>
     </nav>
   )
